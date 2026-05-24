@@ -17,8 +17,7 @@
 
   function initTheme() {
     const saved = localStorage.getItem(THEME_KEY);
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    setTheme(saved || (prefersDark ? 'dark' : 'light'));
+    setTheme(saved === 'dark' ? 'dark' : 'light');
   }
 
   themeToggle?.addEventListener('click', () => {
@@ -26,6 +25,20 @@
   });
 
   initTheme();
+
+  // Hero video — ensure muted autoplay (mobile browsers)
+  const heroVideo = document.querySelector('.hero__video-player');
+  if (heroVideo) {
+    heroVideo.muted = true;
+    const playHeroVideo = () => {
+      heroVideo.play().catch(() => {});
+    };
+    playHeroVideo();
+    heroVideo.addEventListener('loadeddata', playHeroVideo);
+    document.addEventListener('visibilitychange', () => {
+      if (!document.hidden) playHeroVideo();
+    });
+  }
 
   // Mobile menu
   menuToggle?.addEventListener('click', () => {
@@ -44,8 +57,7 @@
   const tabs = document.querySelectorAll('.tab');
   const panels = {
     doner: document.getElementById('panel-doner'),
-    durum: document.getElementById('panel-durum'),
-    tabak: document.getElementById('panel-tabak'),
+    kofte: document.getElementById('panel-kofte'),
     yan: document.getElementById('panel-yan')
   };
 
