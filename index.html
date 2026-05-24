@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="tr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LAVASCH — Elazığ Döner</title>
+  <meta name="description" content="LAVASCH Elazığ — Premium döner, dürüm ve içecekler.">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="fonts.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="page-bg" aria-hidden="true"></div>
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="#" class="logo">LAVASCH</a>
+      <nav class="nav" id="nav" aria-label="Ana menü">
+        <a href="#yemekler" class="nav-pill">Yemekler</a>
+        <a href="#icecekler" class="nav-pill">İçecekler</a>
+        <a href="#konum">Konum</a>
+        <a href="#instagram">Instagram</a>
+      </nav>
+      <div class="header__actions">
+        <div class="flags" aria-label="Dil">
+          <button type="button" class="flag flag--active" title="Türkçe" aria-pressed="true">
+            <svg viewBox="0 0 36 24" aria-hidden="true"><rect width="36" height="24" fill="#E30A17"/><circle cx="14" cy="12" r="6" fill="#fff"/><circle cx="15.5" cy="12" r="4.8" fill="#E30A17"/><polygon fill="#fff" points="22,12 26.5,13.2 24.5,9.5 24.5,14.5 26.5,10.8"/></svg>
+          </button>
+          <button type="button" class="flag" title="Deutsch" aria-pressed="false">
+            <svg viewBox="0 0 36 24" aria-hidden="true"><rect width="36" height="8" fill="#000"/><rect width="36" height="8" y="8" fill="#DD0000"/><rect width="36" height="8" y="16" fill="#FFCE00"/></svg>
+          </button>
+        </div>
+        <button type="button" class="icon-btn" id="themeToggle" aria-label="Tema">
+          <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2"/></svg>
+          <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+        <a href="https://maps.app.goo.gl/nqshfbbxAozY7Xqu7" target="_blank" rel="noopener noreferrer" class="btn btn--accent btn--sm">Yol Tarifi</a>
+        <button type="button" class="menu-toggle" id="menuToggle" aria-label="Menü" aria-expanded="false"><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero__inner">
+        <p class="kicker">Elazığ · Tek Şube</p>
+        <h1>GERÇEK DÖNER.<br>GERÇEK LEZZET.</h1>
+        <p class="hero__text">LAVASCH — Alman-Türk sokak mutfağından ilham. Taze et, özel soslar.</p>
+        <div class="menu-cta">
+          <a href="#yemekler" class="menu-cta__btn">
+            <span class="menu-cta__label">Yemekler</span>
+            <span class="menu-cta__sub">Döner · Dürüm · Tabak</span>
+          </a>
+          <a href="#icecekler" class="menu-cta__btn">
+            <span class="menu-cta__label">İçecekler</span>
+            <span class="menu-cta__sub">Ayran · Limonata · Sıcak</span>
+          </a>
+        </div>
+        <div class="hero__img">
+          <img src="https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?w=1200&q=85" alt="LAVASCH döner" width="1200" height="500" loading="eager">
+        </div>
+      </div>
+    </section>
+
+    <!-- YEMEKLER -->
+    <section class="block" id="yemekler">
+      <div class="container">
+        <header class="block__head">
+          <h2>YEMEKLER</h2>
+          <p>Döner, dürüm ve tabak seçenekleri</p>
+        </header>
+
+        <div class="tabs" role="tablist">
+          <button type="button" class="tab active" data-panel="doner">Döner</button>
+          <button type="button" class="tab" data-panel="durum">Dürüm</button>
+          <button type="button" class="tab" data-panel="tabak">Tabak</button>
+          <button type="button" class="tab" data-panel="yan">Yan Ürün</button>
+        </div>
+
+        <div class="panel" id="panel-doner">
+          <div class="product-grid">
+            <article class="product-card">
+              <div class="product-card__media">
+                <img src="https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?w=600&q=80" alt="Klasik Döner" loading="lazy">
+                <span class="product-card__badge">Çok Satan</span>
+              </div>
+              <div class="product-card__body">
+                <div class="product-card__row">
+                  <h3 class="product-card__name">Klasik Döner</h3>
+                  <span class="product-card__price">₺150</span>
+                </div>
+                <p class="product-card__desc">Tavuk veya et, taze sebze, özel knoblauch sos.</p>
+                <span class="product-card__tag">Tavuk · Et</span>
+              </div>
+            </article>
+            <article class="product-card">
+              <div class="product-card__media">
+                <img src="https://images.unsplash.com/photo-1529006557810-274dba7b6e7d?w=600&q=80" alt="Acılı Döner" loading="lazy">
+              </div>
+              <div class="product-card__body">
+                <div class="product-card__row">
+                  <h3 class="product-card__name">Acılı Döner</h3>
+                  <span class="product-card__price">₺165</span>
+                </div>
+                <p class="product-card__desc">Acı sos, kızarmış biber, ekstra baharat.</p>
+                <span class="product-card__tag">Acılı</span>
+              </div>
+            </article>
+            <article class="product-card">
+              <div class="product-card__media">
+                <img src="https://images.unsplash.com/photo-1565299585323-38d6b0865b47?w=600&q=80" alt="Çift Et Döner" loading="lazy">
+              </div>
+              <div class="product-card__body">
+                <div class="product-card__row">
+                  <h3 class="product-card__name">Çift Et Döner</h3>
+                  <span class="product-card__price">₺195</span>
+                </div>
+                <p class="product-card__desc">İki kat et, bol sos, XL porsiyon.</p>
+                <span class="product-card__tag">XL</span>
+              </div>
+            </article>
+            <article class="product-card">
+              <div class="product-card__media">
+                <img src="https://images.unsplash.com/photo-1626700051175-6818013e1d4f?w=600&q=80" alt="Falafel Döner" loading="lazy">
+                <span class="product-card__badge product-card__badge--green">Vejetaryen</span>
+              </div>
+              <div class="product-card__body">
+                <div class="product-card__row">
+                  <h3 class="product-card__name">Falafel Döner</h3>
+                  <span class="product-card__price">₺130</span>
+                </div>
+                <p class="product-card__desc">Humus, taze garnitür, özel sos.</p>
+                <span class="product-card__tag">Vejetaryen</span>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div class="panel" id="panel-durum" hidden>
+          <div class="product-grid">
+            <article class="product-card">
+              <div class="product-card__media">
+                <img src="https://images.unsplash.com/photo-1626700051175-6818013e1d4f?w=600&q=80" alt="Klasik Dürüm" loading="lazy">
+              </div>
+              <div class="product-card__body">
+                <div class="product-card__row">
+                  <h3 class="product-card__name">Klasik Dürüm</h3>
+                  <span class="product-card__price">₺140</span>
+                </div>
+                <p class="product-card__desc">İnce lavaş, döner eti, sebze ve sos.</p>
+              </div>
+            </article>
+            <article class="product-card">
+              <div class="product-card__media">
+                <img src="https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?w=600&q=80" alt="XL Dürüm" loading="lazy">
+              </div>
+              <div class="product-card__body">
+                <div class="product-card__row">
+                  <h3 class="product-card__name">XL Dürüm</h3>
+                  <span class="product-card__price">₺175</span>
+                </div>
+                <p class="product-card__desc">Büyük lavaş, çift et, ekstra peynir.</p>
+                <span class="product-card__tag">XL</span>
+              </div>
+            </article>
+            <article class="product-card">
+              <div class="product-card__media">
+                <img src="https://images.unsplash.com/photo-1529006557810-274dba7b6e7d?w=600&q=80" alt="Trüf Dürüm" loading="lazy">
+                <span class="product-card__badge">Özel</span>
+              </div>
+              <div class="product-card__body">
+                <div class="product-card__row">
+                  <h3 class="product-card__name">Trüf Dürüm</h3>
+                  <span class="product-card__price">₺210</span>
+                </div>
+                <p class="product-card__desc">Trüf aioli, karamelize soğan.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div class="panel" id="panel-tabak" hidden>
+          <div class="product-grid">
+            <article class="product-card">
+              <div class="product-card__media">
+                <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=600&q=80" alt="Döner Tabağı" loading="lazy">
+              </div>
+              <div class="product-card__body">
+                <div class="product-card__row">
+                  <h3 class="product-card__name">Döner Tabağı</h3>
+                  <span class="product-card__price">₺220</span>
+                </div>
+                <p class="product-card__desc">Patates veya pilav, salata, 2 sos.</p>
+              </div>
+            </article>
+            <article class="product-card">
+              <div class="product-card__media">
+                <img src="https://images.unsplash.com/photo-1565299585323-38d6b0865b47?w=600&q=80" alt="İskender" loading="lazy">
+              </div>
+              <div class="product-card__body">
+                <div class="product-card__row">
+                  <h3 class="product-card__name">İskender Tabağı</h3>
+                  <span class="product-card__price">₺245</span>
+                </div>
+                <p class="product-card__desc">Yoğurtlu sos, tereyağlı, pide üzerinde.</p>
+              </div>
+            </article>
+            <article class="product-card">
+              <div class="product-card__media">
+                <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=600&q=80" alt="Paylaşım Platter" loading="lazy">
+              </div>
+              <div class="product-card__body">
+                <div class="product-card__row">
+                  <h3 class="product-card__name">Paylaşım Platter</h3>
+                  <span class="product-card__price">₺420</span>
+                </div>
+                <p class="product-card__desc">2–3 kişilik karışık döner, patates, soslar.</p>
+                <span class="product-card__tag">2–3 Kişi</span>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div class="panel" id="panel-yan" hidden>
+          <div class="product-grid product-grid--compact">
+            <article class="product-card product-card--small">
+              <div class="product-card__media">
+                <img src="https://images.unsplash.com/photo-1573080496219-a69c9602bec5?w=600&q=80" alt="Patates" loading="lazy">
+              </div>
+              <div class="product-card__body">
+                <div class="product-card__row">
+                  <h3 class="product-card__name">Patates Kızartması</h3>
+                  <span class="product-card__price">₺55</span>
+                </div>
+                <p class="product-card__desc">Baharatlı, çıtır.</p>
+              </div>
+            </article>
+            <article class="product-card product-card--small">
+              <div class="product-card__media">
+                <img src="https://images.unsplash.com/photo-1630431341973-02e1b662ec35?w=600&q=80" alt="Soğan Halkası" loading="lazy">
+              </div>
+              <div class="product-card__body">
+                <div class="product-card__row">
+                  <h3 class="product-card__name">Soğan Halkası</h3>
+                  <span class="product-card__price">₺45</span>
+                </div>
+                <p class="product-card__desc">6 adet.</p>
+              </div>
+            </article>
+            <article class="product-card product-card--small">
+              <div class="product-card__media">
+                <img src="https://images.unsplash.com/photo-1664478540539-47a9a4b03ffb?w=600&q=80" alt="Humus" loading="lazy">
+              </div>
+              <div class="product-card__body">
+                <div class="product-card__row">
+                  <h3 class="product-card__name">Humus & Pide</h3>
+                  <span class="product-card__price">₺65</span>
+                </div>
+                <p class="product-card__desc">Ev yapımı.</p>
+              </div>
+            </article>
+            <article class="product-card product-card--small">
+              <div class="product-card__media">
+                <img src="https://images.unsplash.com/photo-1598110750624-db1edeca5a81?w=600&q=80" alt="Baklava" loading="lazy">
+              </div>
+              <div class="product-card__body">
+                <div class="product-card__row">
+                  <h3 class="product-card__name">Baklava</h3>
+                  <span class="product-card__price">₺70</span>
+                </div>
+                <p class="product-card__desc">2 dilim.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <a href="#icecekler" class="block__jump">İçeceklere git →</a>
+      </div>
+    </section>
+
+    <!-- İÇECEKLER -->
+    <section class="block block--muted" id="icecekler">
+      <div class="container">
+        <header class="block__head">
+          <h2>İÇECEKLER</h2>
+          <p>Soğuk ve sıcak içecekler</p>
+        </header>
+
+        <h3 class="subsection-title">Soğuk İçecekler</h3>
+        <div class="product-grid">
+          <article class="product-card product-card--drink">
+            <div class="product-card__media product-card__media--drink">
+              <img src="https://images.unsplash.com/photo-1629203851120-3726ecdf080e?w=600&q=80" alt="Ayran" loading="lazy">
+            </div>
+            <div class="product-card__body">
+              <div class="product-card__row">
+                <h3 class="product-card__name">Ayran</h3>
+                <span class="product-card__price">₺25</span>
+              </div>
+              <p class="product-card__desc">Geleneksel, soğuk.</p>
+              <span class="product-card__tag">200 ml</span>
+            </div>
+          </article>
+          <article class="product-card product-card--drink">
+            <div class="product-card__media product-card__media--drink">
+              <img src="https://images.unsplash.com/photo-1629203851120-3726ecdf080e?w=600&q=80" alt="Ayran Büyük" loading="lazy">
+            </div>
+            <div class="product-card__body">
+              <div class="product-card__row">
+                <h3 class="product-card__name">Ayran (Büyük)</h3>
+                <span class="product-card__price">₺35</span>
+              </div>
+              <p class="product-card__desc">Büyük boy.</p>
+              <span class="product-card__tag">500 ml</span>
+            </div>
+          </article>
+          <article class="product-card product-card--drink">
+            <div class="product-card__media product-card__media--drink">
+              <img src="https://images.unsplash.com/photo-1622480919505-099d8b1e4e5e?w=600&q=80" alt="Kola" loading="lazy">
+            </div>
+            <div class="product-card__body">
+              <div class="product-card__row">
+                <h3 class="product-card__name">Kola / Fanta / Sprite</h3>
+                <span class="product-card__price">₺35</span>
+              </div>
+              <p class="product-card__desc">Soğuk gazlı içecek.</p>
+            </div>
+          </article>
+          <article class="product-card product-card--drink">
+            <div class="product-card__media product-card__media--drink">
+              <img src="https://images.unsplash.com/photo-1544145945-f90425340cce?w=600&q=80" alt="Şalgam" loading="lazy">
+            </div>
+            <div class="product-card__body">
+              <div class="product-card__row">
+                <h3 class="product-card__name">Şalgam</h3>
+                <span class="product-card__price">₺30</span>
+              </div>
+              <p class="product-card__desc">Acılı veya acısız.</p>
+            </div>
+          </article>
+          <article class="product-card product-card--drink">
+            <div class="product-card__media product-card__media--drink">
+              <img src="https://images.unsplash.com/photo-1622480919505-099d8b1e4e5e?w=600&q=80" alt="Limonata" loading="lazy">
+              <span class="product-card__badge">Favori</span>
+            </div>
+            <div class="product-card__body">
+              <div class="product-card__row">
+                <h3 class="product-card__name">Ev Yapımı Limonata</h3>
+                <span class="product-card__price">₺50</span>
+              </div>
+              <p class="product-card__desc">Taze sıkılmış, naneli.</p>
+            </div>
+          </article>
+          <article class="product-card product-card--drink">
+            <div class="product-card__media product-card__media--drink">
+              <img src="https://images.unsplash.com/photo-1548839140-29a7492991bd?w=600&q=80" alt="Su" loading="lazy">
+            </div>
+            <div class="product-card__body">
+              <div class="product-card__row">
+                <h3 class="product-card__name">Su</h3>
+                <span class="product-card__price">₺10</span>
+              </div>
+              <p class="product-card__desc">0.5L.</p>
+            </div>
+          </article>
+        </div>
+
+        <h3 class="subsection-title">Sıcak İçecekler</h3>
+        <div class="product-grid product-grid--3">
+          <article class="product-card product-card--drink">
+            <div class="product-card__media product-card__media--drink">
+              <img src="https://images.unsplash.com/photo-1556672573-27c4036a68ea?w=600&q=80" alt="Çay" loading="lazy">
+            </div>
+            <div class="product-card__body">
+              <div class="product-card__row">
+                <h3 class="product-card__name">Çay</h3>
+                <span class="product-card__price">₺15</span>
+              </div>
+              <p class="product-card__desc">Demli Türk çayı.</p>
+            </div>
+          </article>
+          <article class="product-card product-card--drink">
+            <div class="product-card__media product-card__media--drink">
+              <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?w=600&q=80" alt="Türk Kahvesi" loading="lazy">
+            </div>
+            <div class="product-card__body">
+              <div class="product-card__row">
+                <h3 class="product-card__name">Türk Kahvesi</h3>
+                <span class="product-card__price">₺40</span>
+              </div>
+              <p class="product-card__desc">Geleneksel pişirim.</p>
+            </div>
+          </article>
+          <article class="product-card product-card--drink">
+            <div class="product-card__media product-card__media--drink">
+              <img src="https://images.unsplash.com/photo-1571934811356-5cc061b6821f?w=600&q=80" alt="Salep" loading="lazy">
+            </div>
+            <div class="product-card__body">
+              <div class="product-card__row">
+                <h3 class="product-card__name">Salep</h3>
+                <span class="product-card__price">₺45</span>
+              </div>
+              <p class="product-card__desc">Tarçınlı, sıcak.</p>
+            </div>
+          </article>
+        </div>
+
+        <a href="#yemekler" class="block__jump">Yemeklere git →</a>
+      </div>
+    </section>
+
+    <!-- KONUM -->
+    <section class="block" id="konum">
+      <div class="container">
+        <header class="block__head">
+          <h2>KONUM</h2>
+          <p>LAVASCH Elazığ — tek şubemiz</p>
+        </header>
+        <div class="location">
+          <div class="map-frame map-frame--dark">
+            <div class="map-frame__bar">
+              <span>Harita</span>
+              <a href="https://maps.app.goo.gl/nqshfbbxAozY7Xqu7" target="_blank" rel="noopener noreferrer">Tam ekran aç</a>
+            </div>
+            <div class="map-frame__map">
+              <iframe title="LAVASCH Elazığ" src="https://maps.google.com/maps?q=38.671015,39.185040&hl=tr&z=17&output=embed" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+          </div>
+          <aside class="location__card">
+            <h3>LAVASCH Elazığ</h3>
+            <p class="location__addr">Elazığ · <a href="https://maps.app.goo.gl/nqshfbbxAozY7Xqu7" target="_blank" rel="noopener noreferrer">Haritada gör</a></p>
+            <dl class="location__hours">
+              <div><dt>Pazartesi – Pazar</dt><dd>10:00 – 23:00</dd></div>
+              <div><dt>Servis</dt><dd>Gel-Al · Paket</dd></div>
+            </dl>
+            <div class="location__btns">
+              <a href="tel:+904242000000" class="btn btn--ghost">Ara</a>
+              <a href="https://maps.app.goo.gl/nqshfbbxAozY7Xqu7" target="_blank" rel="noopener noreferrer" class="btn btn--accent">Yol Tarifi</a>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- INSTAGRAM -->
+    <section class="block block--muted" id="instagram">
+      <div class="container">
+        <header class="block__head block__head--row">
+          <div>
+            <h2>INSTAGRAM</h2>
+            <p>@lavasch_elazig — gönderiler ve profil</p>
+          </div>
+          <a href="https://www.instagram.com/lavasch_elazig/" target="_blank" rel="noopener noreferrer" class="btn btn--accent">Takip Et</a>
+        </header>
+
+        <div class="ig-frame">
+          <!-- Profil üst bölüm -->
+          <div class="ig-frame__header">
+            <img class="ig-frame__avatar" src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=200&h=200&fit=crop&q=85" alt="LAVASCH profil fotoğrafı" width="88" height="88">
+            <div class="ig-frame__meta">
+              <div class="ig-frame__user">
+                <span class="ig-frame__username">lavasch_elazig</span>
+                <a href="https://www.instagram.com/lavasch_elazig/" target="_blank" rel="noopener noreferrer" class="btn btn--ghost btn--sm">Profili Gör</a>
+              </div>
+              <ul class="ig-frame__stats">
+                <li><strong>127</strong> gönderi</li>
+                <li><strong>2.4K</strong> takipçi</li>
+                <li><strong>312</strong> takip</li>
+              </ul>
+              <p class="ig-frame__bio"><strong>LAVASCH Elazığ</strong><br>Premium döner · Günlük taze · Elazığ</p>
+            </div>
+          </div>
+
+          <!-- Gönderi ızgarası (demo) -->
+          <div class="ig-frame__posts" aria-label="Son gönderiler">
+            <a href="https://www.instagram.com/lavasch_elazig/" target="_blank" rel="noopener noreferrer" class="ig-frame__post"><img src="https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?w=400&q=80" alt="Gönderi"></a>
+            <a href="https://www.instagram.com/lavasch_elazig/" target="_blank" rel="noopener noreferrer" class="ig-frame__post"><img src="https://images.unsplash.com/photo-1529006557810-274dba7b6e7d?w=400&q=80" alt="Gönderi"></a>
+            <a href="https://www.instagram.com/lavasch_elazig/" target="_blank" rel="noopener noreferrer" class="ig-frame__post"><img src="https://images.unsplash.com/photo-1626700051175-6818013e1d4f?w=400&q=80" alt="Gönderi"></a>
+            <a href="https://www.instagram.com/lavasch_elazig/" target="_blank" rel="noopener noreferrer" class="ig-frame__post"><img src="https://images.unsplash.com/photo-1565299585323-38d6b0865b47?w=400&q=80" alt="Gönderi"></a>
+            <a href="https://www.instagram.com/lavasch_elazig/" target="_blank" rel="noopener noreferrer" class="ig-frame__post"><img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=400&q=80" alt="Gönderi"></a>
+            <a href="https://www.instagram.com/lavasch_elazig/" target="_blank" rel="noopener noreferrer" class="ig-frame__post"><img src="https://images.unsplash.com/photo-1573080496219-a69c9602bec5?w=400&q=80" alt="Gönderi"></a>
+            <a href="https://www.instagram.com/lavasch_elazig/" target="_blank" rel="noopener noreferrer" class="ig-frame__post"><img src="https://images.unsplash.com/photo-1629203851120-3726ecdf080e?w=400&q=80" alt="Gönderi"></a>
+            <a href="https://www.instagram.com/lavasch_elazig/" target="_blank" rel="noopener noreferrer" class="ig-frame__post"><img src="https://images.unsplash.com/photo-1622480919505-099d8b1e4e5e?w=400&q=80" alt="Gönderi"></a>
+            <a href="https://www.instagram.com/lavasch_elazig/" target="_blank" rel="noopener noreferrer" class="ig-frame__post ig-frame__post--more">
+              <span>Tümünü Gör</span>
+            </a>
+          </div>
+
+          <!-- Canlı Instagram gömme -->
+          <div class="ig-frame__embed" id="igEmbed">
+            <p class="ig-frame__embed-label">Instagram'dan canlı önizleme</p>
+            <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/lavasch_elazig/" data-instgrm-version="14" style="background:#FFF;border:0;margin:0 auto;max-width:540px;min-width:326px;padding:0;width:99.375%;">
+              <a href="https://www.instagram.com/lavasch_elazig/" target="_blank" rel="noopener noreferrer">@lavasch_elazig — Instagram</a>
+            </blockquote>
+          </div>
+
+          <footer class="ig-frame__footer">
+            <a href="https://www.instagram.com/lavasch_elazig/" target="_blank" rel="noopener noreferrer">instagram.com/lavasch_elazig →</a>
+          </footer>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span class="logo logo--sm">LAVASCH</span>
+      <nav>
+        <a href="#yemekler">Yemekler</a>
+        <a href="#icecekler">İçecekler</a>
+        <a href="#konum">Konum</a>
+        <a href="https://www.instagram.com/lavasch_elazig/" target="_blank" rel="noopener noreferrer">Instagram</a>
+      </nav>
+      <a href="tel:+904242000000" class="footer__phone">+90 424 200 00 00</a>
+    </div>
+    <div class="container footer__copy">&copy; 2026 LAVASCH Elazığ</div>
+  </footer>
+
+  <script async src="https://www.instagram.com/embed.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

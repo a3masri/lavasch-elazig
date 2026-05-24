@@ -1,0 +1,25 @@
+/* League Gothic — official web files via Fontsource CDN */
+@font-face {
+  font-family: 'League Gothic';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('https://cdn.jsdelivr.net/fontsource/fonts/league-gothic@5.2.5/latin-400-normal.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'League Gothic';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('https://cdn.jsdelivr.net/fontsource/fonts/league-gothic@5.2.5/latin-700-normal.woff2') format('woff2');
+}
+
+/* German condensed fallback if League Gothic fails to load */
+@font-face {
+  font-family: 'Lavasch Fallback';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('https://fonts.gstatic.com/s/roboto/v32/KFOlCnqEu92Fr1MmWUlfBBc4.woff2') format('woff2');
+}
