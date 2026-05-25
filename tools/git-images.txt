@@ -1,0 +1,18 @@
+﻿images/drinks/.gitkeep
+"images/drinks/Ayran B\303\274y\303\274k = 40 \342\202\272.png"
+"images/drinks/Ayran K\303\274\303\247\303\274k = 30 \342\202\272.png"
+"images/drinks/Kola = 70 \342\202\272.png"
+"images/drinks/Kola Cam = 70 \342\202\272.png"
+"images/drinks/Su = 20 \342\202\272.png"
+images/drinks/cay ucretsiz .jpg
+images/drinks/soguk-icecek-70.png
+images/menu/.gitkeep
+"images/menu/D\303\266ner Bowl = 200 \342\202\272.png"
+"images/menu/D\303\266ner Box = 180 \342\202\272.png"
+"images/menu/D\303\266ner D\303\274r\303\274m = 180 \342\202\272.png"
+"images/menu/D\303\266ner Ekmek Aras\304\261 = 180 \342\202\272 (1).png"
+"images/menu/D\303\266ner Tabak = 220 \342\202\272.png"
+"images/menu/Patates B\303\274y\303\274k = 70 \342\202\272.png"
+"images/menu/Patates K\303\274\303\247\303\274k = 50 \342\202\272.png"
+"images/menu/Tam K\303\266fte = 300 \342\202\272.png"
+"images/menu/Yar\304\261m K\303\266fte = 150 \342\202\272.png"

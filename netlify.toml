@@ -3,13 +3,9 @@
 
 [build]
   publish = "."
-  # No build command — plain HTML/CSS/JS site
 
-# Fallback for unknown paths (existing files like CSS/JS are served first)
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
+# No SPA fallback: this site uses hash links (#yemekler). A catch-all redirect
+# to index.html can break CSS/images on some deploys.
 
 [[headers]]
   for = "/*"
