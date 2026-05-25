@@ -279,7 +279,7 @@ h2 { font-size: clamp(2.25rem, 6vw, 3rem); }
   border: 1px solid var(--line); border-radius: 6px;
 }
 .flag { padding: 3px; background: none; border: 1px solid transparent; border-radius: 4px; cursor: pointer; line-height: 0; }
-.flag svg { width: 24px; display: block; }
+.flag svg { width: 24px; display: block; pointer-events: none; }
 .flag--active { border-color: var(--accent); }
 
 .menu-toggle {
