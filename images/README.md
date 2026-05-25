@@ -1,7 +1,12 @@
 # LAVASCH — Görseller
 
 ## Kök
-- `logo.png` — Şeffaf arka planlı logo (beyaz yazı). Açık temada CSS ile koyu renge çevrilir.
-- Ana sayfa videosu harici MP4 bağlantısı üzerinden yüklenir (`index.html`).
+- `logo.png` — Şeffaf logo
 
-Menü görselleri şu an imgbox CDN üzerinden yükleniyor.
+## `menu/` — Yemekler
+Dosya adları menüdeki isim ve fiyatla eşleşir (ör. `Döner Bowl = 200 ₺.png`).
+
+## `drinks/` — İçecekler
+Aynı şekilde isim ve fiyat dosya adında (ör. `Ayran Büyük = 40 ₺.png`).
+
+Ana sayfa videosu harici MP4 bağlantısından yüklenir.

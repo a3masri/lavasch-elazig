@@ -346,6 +346,8 @@ h2 { font-size: clamp(2.25rem, 6vw, 3rem); }
 
 /* Hero video — simple 16:9 frame */
 .hero__video {
+  position: relative;
+  width: 100%;
   max-width: 960px;
   margin: 0 auto;
   aspect-ratio: 16 / 9;
@@ -354,14 +356,17 @@ h2 { font-size: clamp(2.25rem, 6vw, 3rem); }
   border: 1px solid var(--line);
   background: #000;
   line-height: 0;
+  isolation: isolate;
 }
 
 .hero__video-player {
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
   display: block;
   object-fit: cover;
-  vertical-align: top;
+  object-position: center;
 }
 
 /* Blocks */
@@ -515,6 +520,13 @@ h2 { font-size: clamp(2.25rem, 6vw, 3rem); }
   border: 1px solid color-mix(in srgb, var(--accent) 25%, transparent);
 }
 
+.product-card__price--free {
+  font-size: 1rem;
+  color: #2d5a27;
+  background: color-mix(in srgb, #2d5a27 12%, transparent);
+  border-color: color-mix(in srgb, #2d5a27 25%, transparent);
+}
+
 .product-card__desc {
   font-size: 0.78rem;
   color: var(--text-soft);
@@ -657,16 +669,160 @@ h2 { font-size: clamp(2.25rem, 6vw, 3rem); }
 }
 
 @media (max-width: 768px) {
+  :root {
+    --header-h: 56px;
+  }
+
+  body {
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
+  }
+
+  .container {
+    width: min(var(--max), 94vw);
+  }
+
   .nav { display: none; }
-  .menu-toggle { display: flex; }
+  .menu-toggle {
+    display: flex;
+    min-width: 44px;
+    min-height: 44px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .icon-btn {
+    min-width: 44px;
+    min-height: 44px;
+  }
+
   .header__actions .btn--accent { display: none; }
+  .logo__img { height: 36px; }
+
+  .hero {
+    padding-top: calc(var(--header-h) + 20px);
+    padding-bottom: 32px;
+  }
+
+  h1 {
+    font-size: clamp(1.75rem, 8.5vw, 2.75rem);
+    line-height: 1.05;
+    padding: 0 4px;
+  }
+
+  .hero__highlights {
+    gap: 6px;
+    margin: 16px auto 24px;
+    padding: 0 2px;
+  }
+
+  .hero__highlights li {
+    font-size: 0.65rem;
+    padding: 6px 10px;
+  }
+
+  .menu-cta {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 24px;
+    max-width: 100%;
+  }
+
+  .menu-cta__btn {
+    padding: 16px 12px;
+    min-height: 72px;
+  }
+
+  .menu-cta__label { font-size: 1.35rem; }
+
+  .hero__video {
+    width: 100%;
+    max-width: 100%;
+    border-radius: 10px;
+    /* iOS Safari fallback when aspect-ratio collapses */
+    min-height: 52vw;
+  }
+
+  .hero__video-player {
+    object-fit: cover;
+  }
+
+  .block {
+    padding: 48px 0;
+    scroll-margin-top: calc(var(--header-h) + 12px);
+  }
+
+  .block__head { margin-bottom: 24px; }
+
+  .tabs {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+  }
+
+  .tab {
+    padding: 14px 8px;
+    font-size: 0.9rem;
+    min-height: 48px;
+    text-align: center;
+  }
+
+  .product-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .product-card__name { font-size: 1.05rem; }
+  .product-card__price { font-size: 1.2rem; }
+
+  .block__head--row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .block__head--row .btn {
+    width: 100%;
+    min-height: 48px;
+  }
+
+  .location__btns .btn {
+    flex: 1;
+    min-height: 48px;
+  }
+
+  .ig-embed {
+    max-width: 100%;
+    padding: 12px;
+  }
+
+  .footer {
+    padding-bottom: calc(24px + env(safe-area-inset-bottom));
+  }
+
+  .footer__inner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer__inner nav {
+    justify-content: center;
+    gap: 16px;
+  }
+
+  .footer__inner nav a,
+  .footer__phone {
+    padding: 8px 4px;
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+  }
+
+  body.nav-locked { overflow: hidden; }
+}
+
+@media (max-width: 380px) {
   .menu-cta { grid-template-columns: 1fr; }
-  .product-grid { grid-template-columns: repeat(2, 1fr); gap: 14px; }
-  .block__head--row { flex-direction: column; align-items: flex-start; }
-  .hero__highlights { gap: 8px; }
-  .hero__highlights li { font-size: 0.72rem; padding: 6px 10px; }
-  .footer__inner { flex-direction: column; text-align: center; }
-  .footer__inner nav { justify-content: center; }
+  .tabs { grid-template-columns: 1fr; }
 }
 
 @media (min-width: 900px) {

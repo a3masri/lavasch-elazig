@@ -26,29 +26,48 @@
 
   initTheme();
 
-  // Hero video — ensure muted autoplay (mobile browsers)
+  // Hero video — muted autoplay (iOS / Android)
   const heroVideo = document.querySelector('.hero__video-player');
   if (heroVideo) {
+    heroVideo.defaultMuted = true;
     heroVideo.muted = true;
+    heroVideo.setAttribute('playsinline', '');
+    heroVideo.setAttribute('webkit-playsinline', '');
+
     const playHeroVideo = () => {
-      heroVideo.play().catch(() => {});
+      const p = heroVideo.play();
+      if (p && typeof p.catch === 'function') p.catch(() => {});
     };
+
     playHeroVideo();
-    heroVideo.addEventListener('loadeddata', playHeroVideo);
+    heroVideo.addEventListener('canplay', playHeroVideo, { once: false });
+    heroVideo.addEventListener('loadedmetadata', playHeroVideo);
+
     document.addEventListener('visibilitychange', () => {
       if (!document.hidden) playHeroVideo();
     });
+
+    // First tap anywhere can unlock autoplay on strict mobile browsers
+    document.addEventListener(
+      'touchstart',
+      () => {
+        playHeroVideo();
+      },
+      { once: true, passive: true }
+    );
   }
 
   // Mobile menu
   menuToggle?.addEventListener('click', () => {
     const open = header.classList.toggle('nav-open');
     menuToggle.setAttribute('aria-expanded', open);
+    document.body.classList.toggle('nav-locked', open);
   });
 
   nav?.querySelectorAll('a').forEach((link) => {
     link.addEventListener('click', () => {
       header.classList.remove('nav-open');
+      document.body.classList.remove('nav-locked');
       menuToggle?.setAttribute('aria-expanded', 'false');
     });
   });
