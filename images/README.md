@@ -1,9 +1,12 @@
 # LAVASCH — Görseller
 
-Dosya adları **ASCII** (Netlify/Linux uyumlu): `doner-bowl-200.png`, `ayran-buyuk-40.png`, vb.
+## Kök
+- `logo.png` — Şeffaf logo
 
-- `logo.png` — şeffaf arka plan, beyaz yazı (açık temada CSS ile koyu)
-- `menu/` — yemek görselleri
-- `drinks/` — içecek görselleri
+## `menu/` — Yemekler
+Dosya adları menüdeki isim ve fiyatla eşleşir (ör. `Döner Bowl = 200 ₺.png`).
 
-Yeniden adlandırma: `python tools/rename-assets.py`
+## `drinks/` — İçecekler
+Aynı şekilde isim ve fiyat dosya adında (ör. `Ayran Büyük = 40 ₺.png`).
+
+Ana sayfa videosu harici MP4 bağlantısından yüklenir.

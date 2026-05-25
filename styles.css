@@ -6,8 +6,7 @@
   --accent: #e85d04;
   --accent-hover: #cf5203;
   --radius: 12px;
-  --header-h: 74px;
-  --logo-ratio: 1024 / 442;
+  --header-h: 64px;
   --max: 1120px;
 }
 
@@ -236,38 +235,24 @@ h2 { font-size: clamp(2.25rem, 6vw, 3rem); }
   background: transparent;
 }
 
-/* Logo image — 1024×442, white on transparent */
-.logo-img {
+.logo__img {
   display: block;
+  height: 42px;
   width: auto;
-  height: auto;
-  max-width: 100%;
-  aspect-ratio: var(--logo-ratio);
+  max-width: min(200px, 42vw);
   object-fit: contain;
   background: transparent;
+  border: none;
 }
 
-.logo-img--header {
-  width: min(176px, 40vw);
-  height: auto;
+.logo__img--sm { height: 32px; }
+
+/* White wordmark PNG; invert on light theme for dark text */
+[data-theme="light"] .logo__img {
+  filter: invert(1);
 }
 
-.logo-img--hero {
-  width: min(320px, 78vw);
-  height: auto;
-}
-
-.logo-img--footer {
-  width: min(112px, 32vw);
-  height: auto;
-}
-
-/* Light: dark wordmark · Dark: white wordmark */
-[data-theme="light"] .logo-img {
-  filter: brightness(0);
-}
-
-[data-theme="dark"] .logo-img {
+[data-theme="dark"] .logo__img {
   filter: none;
 }
 
@@ -312,17 +297,8 @@ h2 { font-size: clamp(2.25rem, 6vw, 3rem); }
 .header.nav-open .nav a { padding: 12px; }
 
 /* Hero */
-.hero { padding: calc(var(--header-h) + 32px) 0 0; }
+.hero { padding: calc(var(--header-h) + 48px) 0 0; }
 .hero__inner { text-align: center; }
-
-.hero__brand {
-  margin: 0 auto 20px;
-  line-height: 0;
-}
-
-.hero__brand .logo-img--hero {
-  margin: 0 auto;
-}
 .hero__highlights {
   list-style: none;
   display: flex;
@@ -482,10 +458,6 @@ h2 { font-size: clamp(2.25rem, 6vw, 3rem); }
   display: block;
   object-fit: cover;
   object-position: center;
-}
-
-.product-card__media img[src] {
-  min-height: 100%;
 }
 
 .product-card__badge {
@@ -698,7 +670,7 @@ h2 { font-size: clamp(2.25rem, 6vw, 3rem); }
 
 @media (max-width: 768px) {
   :root {
-    --header-h: 70px;
+    --header-h: 56px;
   }
 
   body {
@@ -725,19 +697,7 @@ h2 { font-size: clamp(2.25rem, 6vw, 3rem); }
   }
 
   .header__actions .btn--accent { display: none; }
-  .logo-img--header {
-    width: min(152px, 46vw);
-  }
-
-  .logo-img--hero {
-    width: min(272px, 86vw);
-  }
-
-  .logo-img--footer {
-    width: min(100px, 40vw);
-  }
-
-  .hero__brand { margin-bottom: 14px; }
+  .logo__img { height: 36px; }
 
   .hero {
     padding-top: calc(var(--header-h) + 20px);
