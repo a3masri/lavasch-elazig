@@ -606,6 +606,20 @@ h2 { font-size: clamp(2.25rem, 6vw, 3rem); }
 .location__addr a { color: var(--accent); font-weight: 600; }
 .location__addr a:hover { text-decoration: underline; }
 
+.location__phone {
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+.location__phone a {
+  color: var(--text);
+  letter-spacing: 0.02em;
+}
+
+.location__phone a:hover {
+  color: var(--accent);
+}
+
 .location__hours div {
   display: flex; justify-content: space-between;
   padding: 10px 0; border-bottom: 1px solid var(--line);
