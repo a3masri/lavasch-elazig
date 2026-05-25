@@ -6,7 +6,7 @@
   --accent: #e85d04;
   --accent-hover: #cf5203;
   --radius: 12px;
-  --header-h: 68px;
+  --header-h: 74px;
   --logo-ratio: 1024 / 442;
   --max: 1120px;
 }
@@ -236,36 +236,39 @@ h2 { font-size: clamp(2.25rem, 6vw, 3rem); }
   background: transparent;
 }
 
-/* Logo — native ratio 1024×442, white on transparent */
-.logo-mark {
+/* Logo image — 1024×442, white on transparent */
+.logo-img {
   display: block;
   width: auto;
   height: auto;
+  max-width: 100%;
   aspect-ratio: var(--logo-ratio);
   object-fit: contain;
   background: transparent;
-  border: none;
 }
 
-.logo-mark--header {
-  width: min(188px, 42vw);
+.logo-img--header {
+  width: min(176px, 40vw);
+  height: auto;
 }
 
-.logo-mark--hero {
-  width: min(340px, 82vw);
+.logo-img--hero {
+  width: min(320px, 78vw);
+  height: auto;
 }
 
-.logo-mark--footer {
-  width: min(120px, 36vw);
+.logo-img--footer {
+  width: min(112px, 32vw);
+  height: auto;
 }
 
-[data-theme="light"] .logo-mark {
-  filter: invert(1) brightness(1.05);
+/* Light: dark wordmark · Dark: white wordmark */
+[data-theme="light"] .logo-img {
+  filter: brightness(0);
 }
 
-[data-theme="dark"] .logo-mark {
+[data-theme="dark"] .logo-img {
   filter: none;
-  opacity: 1;
 }
 
 .nav { display: flex; align-items: center; gap: 4px; }
@@ -317,7 +320,7 @@ h2 { font-size: clamp(2.25rem, 6vw, 3rem); }
   line-height: 0;
 }
 
-.hero__brand .logo-mark {
+.hero__brand .logo-img--hero {
   margin: 0 auto;
 }
 .hero__highlights {
@@ -718,16 +721,16 @@ h2 { font-size: clamp(2.25rem, 6vw, 3rem); }
   }
 
   .header__actions .btn--accent { display: none; }
-  .logo-mark--header {
-    width: min(160px, 48vw);
+  .logo-img--header {
+    width: min(152px, 46vw);
   }
 
-  .logo-mark--hero {
-    width: min(280px, 88vw);
+  .logo-img--hero {
+    width: min(272px, 86vw);
   }
 
-  .logo-mark--footer {
-    width: min(108px, 42vw);
+  .logo-img--footer {
+    width: min(100px, 40vw);
   }
 
   .hero__brand { margin-bottom: 14px; }
