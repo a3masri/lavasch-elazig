@@ -6,7 +6,8 @@
   --accent: #e85d04;
   --accent-hover: #cf5203;
   --radius: 12px;
-  --header-h: 76px;
+  --header-h: 68px;
+  --logo-ratio: 1024 / 442;
   --max: 1120px;
 }
 
@@ -235,28 +236,36 @@ h2 { font-size: clamp(2.25rem, 6vw, 3rem); }
   background: transparent;
 }
 
-.logo__img {
+/* Logo — native ratio 1024×442, white on transparent */
+.logo-mark {
   display: block;
   width: auto;
+  height: auto;
+  aspect-ratio: var(--logo-ratio);
   object-fit: contain;
   background: transparent;
   border: none;
 }
 
-.logo__img--header {
-  height: 58px;
-  max-width: min(280px, 52vw);
+.logo-mark--header {
+  width: min(188px, 42vw);
 }
 
-.logo__img--sm { height: 36px; max-width: 200px; }
-
-/* White wordmark PNG; invert on light theme for dark text */
-[data-theme="light"] .logo__img {
-  filter: invert(1);
+.logo-mark--hero {
+  width: min(340px, 82vw);
 }
 
-[data-theme="dark"] .logo__img {
+.logo-mark--footer {
+  width: min(120px, 36vw);
+}
+
+[data-theme="light"] .logo-mark {
+  filter: invert(1) brightness(1.05);
+}
+
+[data-theme="dark"] .logo-mark {
   filter: none;
+  opacity: 1;
 }
 
 .nav { display: flex; align-items: center; gap: 4px; }
@@ -308,21 +317,8 @@ h2 { font-size: clamp(2.25rem, 6vw, 3rem); }
   line-height: 0;
 }
 
-.hero__logo {
-  display: block;
-  width: min(520px, 92vw);
-  height: auto;
-  max-height: clamp(120px, 28vw, 220px);
+.hero__brand .logo-mark {
   margin: 0 auto;
-  object-fit: contain;
-}
-
-[data-theme="light"] .hero__logo {
-  filter: invert(1);
-}
-
-[data-theme="dark"] .hero__logo {
-  filter: none;
 }
 .hero__highlights {
   list-style: none;
@@ -695,7 +691,7 @@ h2 { font-size: clamp(2.25rem, 6vw, 3rem); }
 
 @media (max-width: 768px) {
   :root {
-    --header-h: 64px;
+    --header-h: 70px;
   }
 
   body {
@@ -722,17 +718,19 @@ h2 { font-size: clamp(2.25rem, 6vw, 3rem); }
   }
 
   .header__actions .btn--accent { display: none; }
-  .logo__img--header {
-    height: 48px;
-    max-width: min(220px, 58vw);
+  .logo-mark--header {
+    width: min(160px, 48vw);
   }
 
-  .hero__logo {
-    max-height: clamp(100px, 32vw, 160px);
-    width: min(400px, 94vw);
+  .logo-mark--hero {
+    width: min(280px, 88vw);
   }
 
-  .hero__brand { margin-bottom: 16px; }
+  .logo-mark--footer {
+    width: min(108px, 42vw);
+  }
+
+  .hero__brand { margin-bottom: 14px; }
 
   .hero {
     padding-top: calc(var(--header-h) + 20px);
